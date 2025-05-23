@@ -1,0 +1,123 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #dce5fa);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.chat-container {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease-in-out;
+}
+
+.chat-container h2 {
+  text-align: center;
+  color: #007bff;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+#messages {
+  height: 320px;
+  overflow-y: auto;
+  padding: 14px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #ccc;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+#messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#messages::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.message {
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 75%;
+  word-wrap: break-word;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.message:hover {
+  transform: scale(1.02);
+}
+
+.message.own {
+  background-color: #d1f5d3;
+  align-self: flex-end;
+  text-align: right;
+  color: #034d1f;
+  border-bottom-right-radius: 0;
+}
+
+.message.other {
+  background-color: #eaeaea;
+  align-self: flex-start;
+  text-align: left;
+  color: #333;
+  border-bottom-left-radius: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+input[type="text"] {
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+button {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
